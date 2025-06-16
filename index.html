@@ -16,17 +16,56 @@ Select ONE Additional Feature to Add
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8" />
     <title>Final Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
-      /* Styling Only Related To THIS Page */
+   .container {
+    display: flex;
+    flex-wrap: wrap; /* allows stacking on small screens */
+    align-items: flex-start;
+    gap: 400px;
+}
+
+/* Image styling */
+.profile-image {
+    flex: 0 0 250px; /* fixed width */
+}
+
+.profile-image img {
+    width: 300%;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+}
+
+/* Bio styling */
+.bio {
+    flex: 1; /* takes remaining space */
+}
+
+/* Optional: Responsive stacking on small screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bio {
+        text-align: left; /* or center if you prefer */
+    }
+}   /* Styling Only Related To THIS Page */
       /*~~~~~ Taken From:
       https://www.w3schools.com/howto/howto_css_parallax.asp*/
       .parallax {
         /* The image used */
-        background-image: url("https://cdn.glitch.global/66249578-345e-4e9c-8fac-cabe98f682e4/image0.jpeg?v=1747657278943");
-
+        /*         background-image: url("https://cdn.glitch.global/66249578-345e-4e9c-8fac-cabe98f682e4/image0.jpeg?v=1747657278943"); */
+        background-color: white;
         /* Set a specific height */
         min-height: 500px;
 
@@ -38,20 +77,20 @@ Select ONE Additional Feature to Add
       }
       .textblock {
         min-height: 500px;
-        background-color: black;
+        background-color: white;
         color: white;
       }
       .parent-flex {
         display: flex;
       }
       .child-flex {
-        background-color: green;
+        background-color: pink;
         margin: 30px;
         padding: 10px;
         text-align: justify;
         width: 40%;
       }
-      .para-1{
+      .para-1 {
         display: flex;
         align-items: center;
       }
@@ -60,16 +99,17 @@ Select ONE Additional Feature to Add
   <body>
     <!-- ⬆⬆⬆⬆ Nav Bar -->
     <ul class="nav">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="art.html">Art</a></li>
-      <li><a href="resume.html">Resume</a></li>
+      <li><a class="active" href="index.html">About Me</a></li>
+      <li><a href="faith.html">Faith</a></li>
+      <li><a href="websites.html">Websites</a></li>
+      <li><a href="travel.html">Travel</a></li>
       <li style="float: right">
         <a target="_blank" href=""
           ><img
             src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
             style="width: 25px; margin: -5px"
-        /></a>
+          />
+        </a>
       </li>
       <li style="float: right">
         <a target="_blank" href=""
@@ -81,32 +121,27 @@ Select ONE Additional Feature to Add
     </ul>
 
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
-    <h1>Ms. Hall | Web Dev 2024-2025</h1>
-    <div class="parallax"></div>
 
-    <div class="textblock parent-flex">
-      <div class="child-flex para-1">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
-        </p>
-      </div>
-      <div class="child-flex">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
-        </p>
-      </div>
-    </div>
+    <!--     <div class="parallax"></div> -->
+
+    <section class="about-me">
+        <div class="container">
+            <div class="profile-image">
+                <img src="https://cdn.glitch.global/9e4b6cd6-72ec-48fe-9a13-72a981664f5f/4F709A2A-FAE4-4709-9C60-4D54AB3840F7.JPG?v=1750019502198"
+                alt="Maya"
+                     width="400">
+            </div>
+            <div class="bio">
+                <h1>Hello, I'm Maya Grate!</h1>
+                <p>
+                    I’m a vocal major from LaGuardia's class 25'. I I will be attending Manhattan University in the fall, and double majoring in communications broadcasting, and sound studies.
+                </p>
+                <p>
+                    I enjoy Reading books, watching anime, cooking, dancing, singing, and spending time with family and friends.
+                </p>
+            
+            </div>
+        </div>
+    </section>
   </body>
 </html>
